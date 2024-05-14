@@ -1,19 +1,30 @@
 ---
 import Banner from "../Components/Banner.astro"
 import Navbar from "../Components/Navbar.astro"
+import Planes from "./Planes.astro"
+
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/LogoTekohaIco.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>TekohaTech</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<Navbar/>
 		<Banner/>
+		<Planes/>
 		<h1>Astro</h1>
 	</body>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>
