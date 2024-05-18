@@ -1,25 +1,44 @@
 ---
-const { title = '', image = '', buttonText = '' } = Astro.props;
-
+const { title = 'Tekoha', image = '../public/LogoTekoha.png', buttonText = 'Ver más' } = Astro.props;
 ---
 
-<div class="card">
-  <img src={image} alt={title} />
-  <h3>{title}</h3>
-  <button>{buttonText}</button>
-</div>
+<section class="card-container">
+  <div class="card">
+    <img src={image} alt={title} />
+    <h3>{title}</h3>
+    <button>{buttonText}</button>
+  </div>
+  <div class="card">
+    <img src={image} alt={title} />
+    <h3>{title}</h3>
+    <button>{buttonText}</button>
+  </div>
+  <div class="card">
+    <img src={image} alt={title} />
+    <h3>{title}</h3>
+    <button>{buttonText}</button>
+  </div>
+</section>
 
 <style>
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  background: linear-gradient(45deg, #00ff88, #1f11eb);
+}
+
 .card {
   width: 200px;
   height: 250px;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  margin: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff; 
 }
 
 .card img {
