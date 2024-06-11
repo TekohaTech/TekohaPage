@@ -1,11 +1,38 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Layout from '../Components/Layout.astro';
 ---
 
-<Layout>
-<section class="services-section py-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-1 fixed-top  navbar-scrolled">
   <div class="container">
+    <a class="navbar-brand gradient-text" href="#">
+      <img src="/LogoTekoha.png" alt="LogoTekoha" width="50" height="50" class="d-inline-block align-top">
+      TekohaTech
+  </a>
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link "  href="/Nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Servicios/">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#planes">Planes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="services-section py-5">
+  <div class="container mt-5 pt-5">
     <h2 class="text-center gradient-text mb-5">Servicios</h2>
     <p class="text-center text-light mb-5">En Tekohá, nos especializamos en brindar soluciones web a pequeñas y medianas empresas (Pymes). Nuestro equipo de expertos en UX/UI diseño y desarrollo web, están listos para ayudarte a llevar tu negocio al siguiente nivel en línea.</p>
 
@@ -60,11 +87,10 @@ import Layout from '../Components/Layout.astro';
     </div>
 
     <div class="text-center mt-5">
-      <a href="#" class="btn btn-primary">¡Contactános hoy mismo!</a>
+      <a href="/Contacto" class="btn btn-primary">¡Contactános hoy mismo!</a>
     </div>
   </div>
 </section>
-</Layout>
 
 <style>
   .gradient-text {
@@ -88,5 +114,10 @@ import Layout from '../Components/Layout.astro';
   }
   .btn-primary:hover {
     background-color: #0056b3;
+  }
+
+  .container.mt-5.pt-5 {
+    margin-top: 6rem;
+    padding-top: 3rem;
   }
 </style>
