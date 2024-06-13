@@ -1,64 +1,77 @@
 ---
 const { title = 'Tekoha', image = '/LogoTekoha.png', buttonText = 'Ver más' } = Astro.props;
 ---
-
-<section class="card-container">
-  <div class="card">
-    <img src={image} alt={title} />
-    <h3>{title}</h3>
-    <button>{buttonText}</button>
-  </div>
-  <div class="card">
-    <img src={image} alt={title} />
-    <h3>{title}</h3>
-    <button>{buttonText}</button>
-  </div>
-  <div class="card">
-    <img src={image} alt={title} />
-    <h3>{title}</h3>
-    <button>{buttonText}</button>
+<section class="portfolio-section">
+  <h2 class="gradient-text text-center mb-4">Trabajos Realizados</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src={image} alt={title} />
+          <h3>{title}</h3>
+          <button>{buttonText}</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src={image} alt={title} />
+          <h3>{title}</h3>
+          <button>{buttonText}</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src={image} alt={title} />
+          <h3>{title}</h3>
+          <button>{buttonText}</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <style>
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  padding: 16px;
-  background: linear-gradient(45deg, #00ff88, #1f11eb);
+.gradient-text {
+    background: linear-gradient(45deg, #026135, #180cc5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-section {
+    padding: 32px 16px;
+    background: linear-gradient(45deg, #00ff88, #1f11eb);
 }
 
 .card {
-  width: 200px;
-  height: 250px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff; 
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 8px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
 }
 
 .card h3 {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
-.card button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  cursor: pointer;
+.card button:hover {
+    background-color: #0056b3;
 }
 </style>
