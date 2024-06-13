@@ -1,5 +1,6 @@
 ---
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../Components/Footer.astro';
 
 const props = {
   juan: {
@@ -9,7 +10,7 @@ const props = {
   },
   mauro: {
     name: "Mauro Flores",
-    description: "Soy Mauro Flores, desarrollador web full stack y viajero con base en Posadas, Misiones. Soy un entusiasta de la tecnología, apasionado por el diseño, y siempre dispuesto a participar en una minga, una colaboración colectiva según las tradiciones de los pueblos originarios.",
+    description: "Soy Mauro Flores, cofundador de Tekohatech y desarrollador web full stack y viajero con base en Posadas, Misiones. Soy un entusiasta de la tecnología, apasionado por el diseño, y siempre dispuesto a participar en una minga, una colaboración colectiva según las tradiciones de los pueblos originarios.",
     image: "../../foto_mau.jpg"
   }
 };
@@ -46,6 +47,7 @@ const props = {
 
 <section class="container-fluid py-5 gradient-background">
   <div class="container mt-5 pt-5">
+    <h2 class="gradient-text text-center mb-4">Nosotros</h2>
     <div class="row text-center">
       <div class="col-md-6">
         <div class="image-container rounded-circle mx-auto">
@@ -64,6 +66,8 @@ const props = {
     </div>
   </div>
 </section>
+
+<Footer/>
 
 <style>
   .gradient-background {
@@ -101,7 +105,7 @@ const props = {
   }
 
   .container.mt-5.pt-5 {
-    margin-top: 6rem;
+    margin-top: 6rem; /* Ajustado para asegurarse de que el contenido no esté demasiado cerca del navbar */
     padding-top: 3rem;
   }
 </style>
