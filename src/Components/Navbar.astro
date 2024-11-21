@@ -4,39 +4,47 @@
       <img src="/LogoTekoha.png" alt="LogoTekoha" width="50" height="50" class="d-inline-block align-top">
       TekohaTech
     </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link "  href="#nosotros">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#servicios">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#planes">Planes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#planes">Planes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    navbarToggler.addEventListener('click', () => {
-      navbarCollapse.classList.toggle('show');
+    // Cerrar el navbar al hacer clic fuera de él
+    document.addEventListener('click', (event) => {
+      const isClickInsideNavbar = 
+        navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+
+      if (!isClickInsideNavbar && navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
     });
 
+    // Cerrar el navbar al hacer clic en un enlace en pantallas pequeñas
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth < 992) { // lg breakpoint
@@ -54,4 +62,3 @@
     -webkit-text-fill-color: transparent;
   }
 </style>
-
